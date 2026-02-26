@@ -1,31 +1,57 @@
-# A — 隐私/SDK/广告拦截 (轻量拦截)
+# --- Google 统计 ---
 host, pagead2.googlesyndication.com, reject
 host-suffix, googlesyndication.com, reject
 host-suffix, doubleclick.net, reject
 host-suffix, google-analytics.com, reject
 host-suffix, yt-analytics.com, reject
 host-suffix, youtube-analytics.com, reject
+
+# --- 国内统计 SDK ---
 host-suffix, umeng.com, reject
 host-suffix, umengcloud.com, reject
 host-suffix, growingio.com, reject
 host-suffix, sensorsdata.cn, reject
 host-suffix, talkingdata.com, reject
+
+# --- 字节系日志 / 追踪 ---
 host-keyword, log.volcengine, reject
-host-suffix, bdp.byteact.com, reject
-host-suffix, mob.com, reject
-host-suffix, adjust.com, reject
-host-suffix, appsflyer.com, reject
-host-suffix, bugly.qq.com, reject
-host-suffix, firebase-settings.crashlytics.com, reject
-host-suffix, report.jpush.cn, reject
 host-suffix, analytics.toutiao.com, reject
 host-suffix, analytics.snssdk.com, reject
 host-suffix, log.snssdk.com, reject
 host-suffix, ad.snssdk.com, reject
+host-suffix, bdp.byteact.com, reject
 host-suffix, vlog.tiktok.com, reject
 host-suffix, tiktok-global-log.com, reject
-host-suffix, log.huya.com, reject
-host-suffix, ylog.huya.com, reject
+
+# --- 腾讯系统计 ---
+host-suffix, bugly.qq.com, reject
+host-suffix, report.jpush.cn, reject
+
+# --- Firebase / 崩溃上报 ---
+host-suffix, firebase-settings.crashlytics.com, reject
+
+# --- 移动归因 / 安装追踪 ---
+host-suffix, adjust.com, reject
+host-suffix, appsflyer.com, reject
+host-suffix, flurry.com, reject
+
+# --- Bilibili / 直播类上报 ---
 host-suffix, log.bilibili.com, reject
 host-suffix, data.bilibili.com, reject
 host-suffix, ad.bilibili.com, reject
+host-suffix, log.huya.com, reject
+host-suffix, ylog.huya.com, reject
+
+# --- 网易统计 ---
+host, impservice.youdao.com, reject
+host, impservice.dictapp.youdao.com, reject
+
+# --- 音乐类日志 ---
+host, mobilelog.kugou.com, reject
+
+# --- 国际测量 / 验证类（保守挑选） ---
+host-suffix, comscore.com, reject
+host-suffix, quantserve.com, reject
+host-suffix, doubleverify.com, reject
+host-suffix, moatads.com, reject
+host-suffix, measurementapi.com, reject
