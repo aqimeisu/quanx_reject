@@ -1,3 +1,9 @@
+# ============================================================
+# 轻量隐私拦截规则
+# 场景：千牛办公 / 油管 / 虎牙 / 微博 / 抖音 / B站 / 国内游戏(需看广告)
+# 更新：2026-02
+# ============================================================
+
 # --- Google 统计与广告 ---
 host, pagead2.googlesyndication.com, reject
 host, s.youtube.com, reject
@@ -7,14 +13,14 @@ host-suffix, google-analytics.com, reject
 host-suffix, yt-analytics.com, reject
 host-suffix, youtube-analytics.com, reject
 
-# --- 国内通用统计 SDK (已补充百度与腾讯移动分析) ---
+# --- 国内通用统计 SDK ---
 host-suffix, umeng.com, reject
 host-suffix, umengcloud.com, reject
 host-suffix, growingio.com, reject
 host-suffix, sensorsdata.cn, reject
 host-suffix, talkingdata.com, reject
-host-suffix, hm.baidu.com, reject
-host-suffix, mta.qq.com, reject
+host, hm.baidu.com, reject
+host, mta.qq.com, reject
 
 # --- 字节系日志 / 追踪 ---
 host-keyword, log.volcengine, reject
@@ -26,8 +32,16 @@ host-suffix, bdp.byteact.com, reject
 host-suffix, vlog.tiktok.com, reject
 host-suffix, tiktok-global-log.com, reject
 
-# --- 腾讯系统计 ---
-host-suffix, bugly.qq.com, reject
+# --- 抖音广告投放 (若需玩游戏看广告，请保持注释状态) ---
+# host-suffix, pangle.io, reject
+# host-suffix, iesopa.com, reject
+
+# --- 腾讯系统计与广告 (若需玩游戏看广告，请保持注释状态) ---
+# host-suffix, gdt.qq.com, reject
+# host-suffix, e.qq.com, reject
+
+# --- 百度广告联盟 (若需玩游戏看广告，请保持注释状态) ---
+# host-suffix, union.baidu.com, reject
 
 # --- 新浪微博统计与广告 ---
 host-suffix, beacon.sina.com.cn, reject
